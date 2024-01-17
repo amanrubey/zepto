@@ -53,11 +53,11 @@ export default function Card4({ selectedList, setSelectedList, cardRef, clicked,
 
     return (
         <>
-            <div className='flex gap-2 w-[40rem] duration-100 flex-wrap p-2 '>
+            <div className='flex gap-2 sm:w-[24rem] md:w-[40rem] duration-100 flex-wrap p-2 '>
                 {newpeople.map((prs) => {
                     return <div key={prs.email} onKeyDown={() => setSelectedList(pre => pre.filter((p) => !p.includes(prs.email)))} className='w-max hover:border-[0.1px] duration-100  hover:border-blue-600 bg-gray-50 flex items-center gap-2 p-2 rounded-full'>
                         <Image
-                            className='rounded-full'
+                            className='rounded-full sm:h-4 sm:w-4  md:h-[36px] md:w-[36px]'
                             width={36}
                             height={36}
                             src={prs.photoUrl}
